@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Post Detail</h1>
+<h3>{{post.title}}</h3>
+<p>{{post.body}}</p>
+
+<a href='{% url 'postupdate' post.id %}'>Post update</a>
+<a href='{% url 'postdelete' post.id %}'>Post delete</a>
+
+{% endblock %}
